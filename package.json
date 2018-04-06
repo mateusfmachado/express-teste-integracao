@@ -1,0 +1,22 @@
+{
+  "name": "teste-integracao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=TEST nodemon",
+    "test": "NODE_ENV=TEST mocha --timeout 2000"
+  },
+  "author": "mateus machado",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.0.5"
+  }
+}
