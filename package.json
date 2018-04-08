@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=TEST nodemon",
+    "start": "node server.js",
     "test": "NODE_ENV=TEST mocha --timeout 2000"
   },
   "author": "mateus machado",
