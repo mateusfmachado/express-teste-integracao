@@ -1,6 +1,6 @@
-const router = require('express').Router()
+const router = require('express').Router();
 
-router.get( '/', (req,res,next) => res.send({ ok: true }) )
-router.post( '/', (req,res,next) => res.send({ ok: req.body.text }) )
+router.get( '/', (req,res,next) => res.send({ ok: true }) );
+router.post( '/', (req,res,next) => res.send({ ok: req.body.text }) );
 
-module.exports = router
+module.exports = router;

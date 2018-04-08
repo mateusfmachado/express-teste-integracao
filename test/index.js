@@ -1,9 +1,9 @@
-const chai = require('chai')
-const app = require('../server')
-const expect = chai.expect
-const chaiHttp = require('chai-http')
+const chai = require('chai');
+const app = require('../server');
+const expect = chai.expect;
+const chaiHttp = require('chai-http');
 
-chai.use(chaiHttp)
+chai.use(chaiHttp);
 
 describe('API', () => {
 
@@ -12,15 +12,15 @@ describe('API', () => {
         chai.request(app).get('/')
         .end((err, res) => {
 
-            expect(res).to.have.status(200)
-            expect(res.body).to.be.a('object')
-            expect(res.body.ok).to.be.an('boolean')
-            expect(res.body.ok).to.be.equal(true)
-            done()
+            expect(res).to.have.status(200);
+            expect(res.body).to.be.a('object');
+            expect(res.body.ok).to.be.an('boolean');
+            expect(res.body.ok).to.be.equal(true);
+            done();
             
-        })
+        });
 
-    })
+    });
 
     it('Check Response - POST /', (done) => {
 
@@ -28,14 +28,14 @@ describe('API', () => {
         .send({ text: "teste" })
         .end((err, res) => {
 
-            expect(res).to.have.status(200)
-            expect(res.body).to.be.a('object')
-            expect(res.body.ok).to.be.an("string")
-            expect(res.body.ok).to.be.equal("teste")
-            done()
+            expect(res).to.have.status(200);
+            expect(res.body).to.be.a('object');
+            expect(res.body.ok).to.be.an("string");
+            expect(res.body.ok).to.be.equal("teste");
+            done();
 
-        })
+        });
 
-    })
+    });
 
-})
+});

@@ -1,10 +1,10 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const PORT = process.env.PORT || 8085
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 8085;
+const app = express();
 
-app.use( bodyParser.urlencoded({ extended: false}) )
-app.use( bodyParser.json() )
+app.use( bodyParser.urlencoded({ extended: false}) );
+app.use( bodyParser.json() );
 
 app.use('/', require('./routes'));
 
@@ -22,8 +22,10 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     }});
-});  
+});
 
-app.listen( PORT, () => process.env.NODE_ENV != 'TEST' && console.log('Running on localhost:'+PORT) )
+app.listen( PORT, () => {
+    return process.env.NODE_ENV != 'TEST' && console.log('Running on localhost:'+PORT);
+});
 
-module.exports = app
+module.exports = app;
